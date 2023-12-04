@@ -76,7 +76,7 @@ void setup(){
   icon=loadImage("sprite/misc/icon.png");
   size(1280,720);
   windowMove(100,100);
-  windowTitle("Cuerbeat 'Em Up");
+  windowTitle("Proyecto Dario,Equipo 8");
   surface.setIcon(icon);
   typtitle=createFont("Arial",32);
   textFont(typtitle);
