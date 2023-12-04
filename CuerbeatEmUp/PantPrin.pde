@@ -22,7 +22,7 @@ class PantPrin{
     btntops=new Boton(990,530,cf.btnw,cf.btnh,12);
     btncred=new Boton(990,590,cf.btnw,cf.btnh,13);
     btnexit=new Boton(990,650,cf.btnw,cf.btnh,14);
-    btngamen=new Boton(990,390,cf.btnw,cf.btnh,14);
+    btngamen=new Boton(990,340,cf.btnw,cf.btnh,14);
     tmpexit=new Temporizador(120);
   }
   

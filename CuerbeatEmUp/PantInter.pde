@@ -5,13 +5,12 @@
 //Descripción: El módulo PantGame controla la pantalla
 // de "acción" del juego.
 
-class PantInter{
-  Boton btncan;  //regresa a pantalla principal
+class PantInter{  //regresa a pantalla principal
   Boton btnret;
   Boton btnplus;
   Boton btngamen;
   PantInter(){
-    btncan=new Boton(440,360,cf.btnw,cf.btnh,20);
+    btngamen=new Boton(440,360,cf.btnw,cf.btnh,20);
     btnret=new Boton(840,360,cf.btnw,cf.btnh,19);
     btnplus=new Boton(650,260,cf.btnw,cf.btnh,19);
   }
@@ -23,7 +22,7 @@ class PantInter{
     textAlign(CENTER,CENTER);
     fill(0);
     text(idi.getMensaje(18),640,100);
-    btncan.display();
+    btngamen.display();
     btnret.display();
     btnplus.display();
   }
