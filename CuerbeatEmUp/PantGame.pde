@@ -16,6 +16,7 @@ class PantGame{
   Punto2D imgmon;
   Punto2D imgpis;
   Boton btnpause;
+  Boton btninter;
   Enemigo enemy;
   float bal;
   int dir;
@@ -32,7 +33,8 @@ class PantGame{
     imgmon=new Punto2D(0,-65);
     imgpis=new Punto2D(0,260);
     enemy=new Enemigo(cf.estartx,cf.estarty,100,200);
-    btnpause=new Boton(640,685,cf.btnw,cf.btnh,15);
+    btnpause=new Boton(640,645,cf.btnw,cf.btnh,15);
+    btninter=new Boton(640,50, cf.btnw,cf.btnh,15);
     bal=-1.0;
     dir=RIGHT;
   }
@@ -57,6 +59,7 @@ class PantGame{
     checkColisiones();
     rlj.controlReloj();
     btnpause.display();
+    btninter.display();
     bal+=(dir==RIGHT)?0.001:-0.001;
     if(Math.abs(bal)>=1)
       dir=(bal>=1)?LEFT:RIGHT;
@@ -121,6 +124,10 @@ class PantGame{
     if(btnpause.isClicked(x,y,b)){
       mscstage.setGain(cf.mscgainlow);
       gc.setPantAct(PANTPAUS);
+    }  
+    if(btninter.isClicked(x,y,b)){
+      mscstage.setGain(cf.mscgainlow);
+      gc.setPantAct(PANTINTER);
     }  
   }
   

@@ -12,6 +12,7 @@ class PantPrin{
   Boton btncred;
   Boton btntops;
   Boton btnconf;
+  Boton btngamen;
   Temporizador tmpexit;
   
   PantPrin(){
@@ -21,6 +22,7 @@ class PantPrin{
     btntops=new Boton(990,530,cf.btnw,cf.btnh,12);
     btncred=new Boton(990,590,cf.btnw,cf.btnh,13);
     btnexit=new Boton(990,650,cf.btnw,cf.btnh,14);
+    btngamen=new Boton(990,390,cf.btnw,cf.btnh,14);
     tmpexit=new Temporizador(120);
   }
   
@@ -38,6 +40,7 @@ class PantPrin{
     btntops.display();
     btncred.display();
     btnexit.display();
+    btngamen.display();
     if(tmpexit.isActive())
       tmpexit.coolingDown();
     if(tmpexit.isOff()){
@@ -57,6 +60,8 @@ class PantPrin{
     }  
     if(btntops.isClicked(x,y,b))
       gc.setPantAct(PANTTOPS);
+    if(btngamen.isClicked(x,y,b))
+      gc.setPantAct(PANTGAMEN);
     if(btncred.isClicked(x,y,b)){
       gc.musicManager(false);
       gc.setPantAct(PANTCRED);

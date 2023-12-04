@@ -9,7 +9,7 @@ class PantPlus{
   Personaje per;
   HealItem hi;
   Reloj rlj;
-  PImage cielo;
+ // PImage cielo;
   PImage montes;
   PImage piso;
   Punto2D imgcie;
@@ -25,7 +25,7 @@ class PantPlus{
     hi=new HealItem(450,500,0,0);
     rlj=new Reloj();
     rlj.iniciaReloj();
-    cielo=loadImage("sprite/fondos/cielo.png");
+    //cielo=loadImage("sprite/fondos/cielo.png");
     montes=loadImage("sprite/fondos/montes.png");
     piso=loadImage("sprite/fondos/piso.png");
     imgcie=new Punto2D(0,0);
@@ -46,7 +46,7 @@ class PantPlus{
     stroke(255);
     textAlign(CENTER,CENTER);
     text(idi.getMensaje(0),640,360);
-    planoCielo();
+    //planoCielo();
     planoFondo();
     planoFrente();
     moverPlanos();
@@ -82,10 +82,10 @@ class PantPlus{
     }
   }
   
-  void planoCielo(){
-    imageMode(CORNER);
-    image(cielo,imgcie.getX(),imgcie.getY());
-  }
+  //void planoCielo(){
+  //  imageMode(CORNER);
+  //  image(cielo,imgcie.getX(),imgcie.getY());
+  //}
   
   void planoFondo(){
     imageMode(CORNER);
