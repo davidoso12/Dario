@@ -11,7 +11,7 @@ class PantInter{
   Boton btngamen;
   PantInter(){
     btngamen=new Boton(440,360,cf.btnw,cf.btnh,38);
-    btnret=new Boton(840,360,cf.btnw,cf.btnh,19);
+    btnret=new Boton(840,360,cf.btnw,cf.btnh,40);
     btnplus=new Boton(650,260,cf.btnw,cf.btnh,39);
   }
   

@@ -1,5 +1,5 @@
 #language=0
-#langstr=40
+#langstr=41
 #spdx=3
 #spdy=3
 #pp=9,30,6,6,6,6,10,9,9,9
@@ -22,8 +22,8 @@
 #itime=60
 #htime=120
 #logstate=OFF
-#dif=25
-#plynm=ZH4
+#dif=26
+#plynm=YG4
 #emaxhp=50
 #estartx=1100
 #estarty=360
@@ -34,9 +34,9 @@
 #espdy=1
 #clinc=0.001
 #topsc=10
-#sfxgain=0
-#mscgain=0
-#voigain=0
+#sfxgain=1
+#mscgain=1
+#voigain=1
 #mscgainlow=-15
 #mingain=-30
 #maxgain=6

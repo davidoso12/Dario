@@ -9,6 +9,7 @@ class PantGame{
   Personaje per;
   HealItem hi;
   Reloj rlj;
+  //PImage pixe;
   PImage cielo;
   PImage montes;
   PImage piso;
@@ -26,6 +27,7 @@ class PantGame{
     hi=new HealItem(450,500,0,0);
     rlj=new Reloj();
     rlj.iniciaReloj();
+   // pixe=loadImage("sprite/fondos/diapixe.png");
     cielo=loadImage("sprite/fondos/cielo.png");
     montes=loadImage("sprite/fondos/montes.png");
     piso=loadImage("sprite/fondos/piso.png");

@@ -35,7 +35,7 @@ class PantPlus{
     
     btnpause=new Boton(640,685,cf.btnw,cf.btnh,15);
     btngamen=new Boton(640,50,cf.btnw,cf.btnh,38);
-    btnret=new Boton(890,50,cf.btnw,cf.btnh,19);
+    btnret=new Boton(890,50,cf.btnw,cf.btnh,40);
     bal=-1.0;
     dir=RIGHT;
   }
