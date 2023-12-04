@@ -1,5 +1,5 @@
 //Módulo TopScores 
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 29 de noviembre de 2022
 //fecha de ultima modificación: 2 de diciembre de 2022
 //comentario:

@@ -1,5 +1,5 @@
 //Modulo Bitácora
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 20 de noviembre de 2023
 //fecha de ultima modificación: 20 de noviembre de 2023
 //comentario: Permite generar registros de información del funcionamiento del 

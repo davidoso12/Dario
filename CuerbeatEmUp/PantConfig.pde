@@ -1,5 +1,5 @@
 //Módulo PantConfig
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 27 de septiembre de 2023 
 //Fecha de última modificacion: 1 de diciembre de 2023
 //Descripción: El módulo PantConfig controla la pantalla

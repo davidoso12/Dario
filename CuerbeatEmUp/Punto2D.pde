@@ -1,5 +1,5 @@
 //Módulo Punto2D
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 4 de octubre de 2023
 //fecha de ultima modificación: 15 de noviembre de 2023
 //comentario: se implementa una clase para par de coordenadas 2D

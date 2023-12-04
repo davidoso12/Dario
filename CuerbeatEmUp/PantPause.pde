@@ -1,5 +1,5 @@
 //Módulo PantPause
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 6 de noviembre de 2023 
 //Fecha de última modificacion: 30 de noviembre de 2023
 //Descripción: El módulo PantConfig controla la pantalla

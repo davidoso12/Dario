@@ -1,9 +1,9 @@
-//Módulo PantGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Módulo PantPlus
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 23 de septiembre de 2023 
 //Fecha de última modificacion: 2 de diciembre de 2023
-//Descripción: El módulo PantGame controla la pantalla
-// de "acción" del juego.
+//Descripción: El módulo PantPlus es donde el personaje poodra adquirir mas vida 
+// 
 
 class PantPlus{
   Personaje per;

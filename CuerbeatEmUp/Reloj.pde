@@ -1,5 +1,5 @@
 //Modulo Reloj
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 2 de octubre de 2023
 //fecha de ultima modificación: 29 de noviembre de 2022
 //comentario: Implementa un reloj en formato de segundos y minutos, se usará

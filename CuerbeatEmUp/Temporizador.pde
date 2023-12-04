@@ -1,5 +1,5 @@
 //Modulo Temporizador
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 2 de octubre de 2023
 //fecha de ultima modificación: 2 de octubre de 2023
 //comentario: El Temporizador, basado en frames, para controlar diversos eventos 

@@ -1,7 +1,7 @@
 //Módulo GameControl
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 13 de septiembre de 2023 
-//Fecha de última modificacion: 29 de noviembre de 2023
+//Fecha de última modificacion: 2 de Diciembre de 2023
 //Descripción: El módulo GameControl tendrá la función de
  //coordinar la ejecución del juego en función de la pantalla
  //activa.

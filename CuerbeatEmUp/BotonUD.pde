@@ -1,5 +1,5 @@
 //Modulo BotonUD
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 26 de noviembre de 2023
 //fecha de ultima modificación: 26 de diciembre de 2023
 //comentario: se implementa un botón Up-Down.

@@ -1,5 +1,5 @@
 //Módulo HealItem
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 20 de noviembre de 2023
 //fecha de ultima modificación: 27 de noviembre de 2023
 //comentario: 

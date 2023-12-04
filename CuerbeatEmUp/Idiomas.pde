@@ -1,5 +1,5 @@
 //Módulo Idiomas
-//Elaborado por: Ruben Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de Creación:20 de septiembre de 2023
 //fecha de ultima modificación:25 de septiembre de 2023
 //Descripción: El módulo Idiomas controlará el despliegue de
