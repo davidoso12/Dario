@@ -40,8 +40,8 @@ class PantPlus{
   void display(){
     music();
     if(resetgame)
-      resetGame();
-    background(0);
+    resetGame();
+    background(0,0,0);
     fill(255);
     stroke(255);
     textAlign(CENTER,CENTER);

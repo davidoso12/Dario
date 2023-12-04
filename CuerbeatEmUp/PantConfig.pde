@@ -38,7 +38,7 @@ class PantConfig{
     slbvsfx.setValue(cf.sfxgain); 
     slbvmsc.setValue(cf.mscgain);
     slbvvoi.setValue(cf.voigain);
-    imgfondo=loadImage("sprite/fondos/fondoconfig.jpg");
+    imgfondo=loadImage("sprite/fondos/mapa.png");
   }
   
   void display(){

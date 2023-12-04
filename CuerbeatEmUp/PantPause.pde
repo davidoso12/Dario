@@ -15,11 +15,11 @@ class PantPause{
   }
   
   void display(){
-    fill(color(128,0,128,5));
+    fill(color(0,0,0,5));
     stroke(255);
     rect(640,360,1280,720);
     textAlign(CENTER,CENTER);
-    fill(0);
+    fill(255);
     text(idi.getMensaje(18),640,100);
     btncan.display();
     btnret.display();

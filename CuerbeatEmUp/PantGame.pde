@@ -34,7 +34,7 @@ class PantGame{
     imgpis=new Punto2D(0,260);
     enemy=new Enemigo(cf.estartx,cf.estarty,100,200);
     btnpause=new Boton(640,645,cf.btnw,cf.btnh,15);
-    btninter=new Boton(640,50, cf.btnw,cf.btnh,15);
+    btninter=new Boton(640,50, cf.btnw,cf.btnh,39);
     bal=-1.0;
     dir=RIGHT;
   }

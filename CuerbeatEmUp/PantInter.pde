@@ -10,17 +10,17 @@ class PantInter{  //regresa a pantalla principal
   Boton btnplus;
   Boton btngamen;
   PantInter(){
-    btngamen=new Boton(440,360,cf.btnw,cf.btnh,20);
+    btngamen=new Boton(440,360,cf.btnw,cf.btnh,38);
     btnret=new Boton(840,360,cf.btnw,cf.btnh,19);
-    btnplus=new Boton(650,260,cf.btnw,cf.btnh,19);
+    btnplus=new Boton(650,260,cf.btnw,cf.btnh,39);
   }
   
   void display(){
-    fill(color(128,0,128,5));
+    fill(color(0,0,0,5));
     stroke(255);
     rect(640,360,1280,720);
     textAlign(CENTER,CENTER);
-    fill(0);
+    fill(255);
     text(idi.getMensaje(18),640,100);
     btngamen.display();
     btnret.display();

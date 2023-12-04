@@ -6,11 +6,13 @@
 // de carga inicial de datos del juego.
 
 class PantLoad{
+  PImage imgtit;
   Temporizador tmpidle;
   boolean loading;
   int msg;
   
   PantLoad(){
+    imgtit = loadImage("sprite/fondos/principla.png");
     tmpidle=new Temporizador(180);
     loading=true;
   }
@@ -22,6 +24,8 @@ class PantLoad{
     textAlign(CENTER,CENTER);
     text(idi.getMensaje(1),640,360);
     text(idi.getMensaje(msg),400,600);
+    imageMode(CENTER);
+    image(imgtit,640,360);
     if(!loading && !tmpidle.isActive())
       tmpidle.activate();
     if(tmpidle.isActive())
