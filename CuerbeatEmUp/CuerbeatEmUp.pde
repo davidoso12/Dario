@@ -18,6 +18,10 @@ final int PANTCRED=4;
 final int PANTTOPS=5;
 final int PANTPAUS=6;
 final int PANTENDG=7;
+final int PANTPLUS=8;
+final int PANTPAUSES=9;
+final int PANTINTER=10;
+final int PANTGAMEN=11;
 final int PANMWALK=0;
 final int PANMDEAD=1;
 final int PANMDEFN=2;
@@ -39,7 +43,6 @@ final int CNDATK=1;
 final int STOP=5;
 final boolean DMGP=true;
 final boolean DMGK=false;
-
 PImage icon;
 PFont typtitle;
 GameControl gc;
