@@ -18,7 +18,7 @@
 #btnw=200
 #btnh=50
 #hcs=40
-#drwc=OFF
+#drwc=ON
 #itime=60
 #htime=120
 #logstate=OFF

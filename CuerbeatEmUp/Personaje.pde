@@ -38,7 +38,12 @@ class Personaje{
     gameover=false;
     onscroll=false;
     onhit=onmotion=false;
-    lb=new LifeBar(cf.maxhp,new Punto2D(210,50),new Punto2D(300,40),color(233,255,0),color(255,0,0));
+     
+      PImage decorationImg = loadImage("sprite/misc/barra-f.png");
+    PImage backgroundImg = loadImage("sprite/misc/boton.png");
+  lb = new LifeBar(cf.maxhp, new Punto2D(210, 50), new Punto2D(300, 40), color(233, 255, 0), decorationImg, backgroundImg);
+
+
     clbody=new Colisionador(pos,new Punto2D(0,0),cf.pcbs,COLBODY);
     clpnch=new Colisionador(pos,new Punto2D(cf.prpx,cf.prpy),cf.pcps,COLATCK);
     clkick=new Colisionador(pos,new Punto2D(cf.prkx,cf.prky),cf.pcks,COLATCK);

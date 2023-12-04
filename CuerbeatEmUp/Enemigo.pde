@@ -29,6 +29,7 @@ class Enemigo{
   Colisionador clhead;
   Temporizador it;
   AnimationStructure anistr;
+  
     
   Enemigo(int x,int y,int w,int h){
     pos=new Punto2D(x,y);
@@ -42,7 +43,12 @@ class Enemigo{
     onhit=onmotion=false;
     conduct=CNDPAT;
     dir=DOWN;
-    lb=new LifeBar(cf.emaxhp,new Punto2D(110,100),new Punto2D(100,40),color(0,150,0),color(255,0,0));
+    PImage decorationImg = loadImage("sprite/misc/barra-f.png");
+    PImage backgroundImg = loadImage("sprite/misc/boton.png");  // Reemplaza con la ruta correcta
+  lb = new LifeBar(cf.emaxhp, new Punto2D(1170, 100), new Punto2D(100, 40), color(0, 150, 0), decorationImg, backgroundImg);
+
+
+
     clbody=new Colisionador(pos,new Punto2D(0,0),cf.pcbs,COLBODY);
     clpnch=new Colisionador(pos,new Punto2D(cf.prpx,cf.prpy),cf.pcps,COLATCK);
     clkick=new Colisionador(pos,new Punto2D(cf.prkx,cf.prky),cf.pcks,COLATCK);
