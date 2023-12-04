@@ -97,6 +97,10 @@ void mouseReleased(){
   gc.mouseControl(mouseX,mouseY,mouseButton);
 }
 
+
+//Controla las teclas para el movimiento del personaje en cada pantalla
+
+
 void keyReleased(){
   gc.keyRelControl(key);
   gc.keyRelControlPantGamen(key);
