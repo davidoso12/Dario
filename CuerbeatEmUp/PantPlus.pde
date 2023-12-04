@@ -16,7 +16,8 @@ class PantPlus{
   Punto2D imgmon;
   Punto2D imgpis;
   Boton btnpause;
-  Enemigo enemy;
+  Boton btngamen;
+  Boton btnret;
   float bal;
   int dir;
   
@@ -33,6 +34,8 @@ class PantPlus{
     imgpis=new Punto2D(0,260);
     
     btnpause=new Boton(640,685,cf.btnw,cf.btnh,15);
+    btngamen=new Boton(640,50,cf.btnw,cf.btnh,38);
+    btnret=new Boton(890,50,cf.btnw,cf.btnh,19);
     bal=-1.0;
     dir=RIGHT;
   }
@@ -56,6 +59,8 @@ class PantPlus{
     checkColisiones();
     rlj.controlReloj();
     btnpause.display();
+    btngamen.display();
+    btnret.display();
     bal+=(dir==RIGHT)?0.001:-0.001;
     if(Math.abs(bal)>=1)
       dir=(bal>=1)?LEFT:RIGHT;
@@ -118,6 +123,14 @@ class PantPlus{
     if(btnpause.isClicked(x,y,b)){
       mscstage.setGain(cf.mscgainlow);
       gc.setPantAct(PANTPAUS);
+    }
+    if(btngamen.isClicked(x,y,b)){
+      mscstage.setGain(cf.mscgainlow);
+      gc.setPantAct(PANTGAMEN);
+    }  
+    if(btnret.isClicked(x,y,b)){
+      mscstage.setGain(cf.mscgainlow);
+      gc.setPantAct(PANTGAME);
     }  
   }
   
@@ -137,7 +150,6 @@ class PantPlus{
     hi=new HealItem(450,500,0,0);
     rlj.resetReloj();
     rlj.iniciaReloj();
-    enemy=new Enemigo(cf.estartx,cf.estarty,100,200);
     imgcie=new Punto2D(0,0);
     imgmon=new Punto2D(0,-70);
     imgpis=new Punto2D(0,260);

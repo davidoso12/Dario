@@ -20,7 +20,7 @@ class TopScores{
     
   //Constructor: inicia los elementos 
   TopScores(){
-    imgbck=loadImage("sprite/fondos/fondotopscore.jpg");
+    imgbck=loadImage("sprite/fondos/mapa.png");
     file=loadStrings("topscores.dat");
     p=new Punto2D(400,200);
     fy=35;
@@ -79,7 +79,7 @@ class TopScores{
   //grafica la tabla de puntajes tope
   void displayData(){
     imageMode(CENTER);
-    tint(255,170);
+    tint(255,255);
     image(imgbck,640,360);
     noTint();
     //encabezados de la tabla
