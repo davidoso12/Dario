@@ -1,0 +1,97 @@
+Versión Agregados 9 (A9) JUEGO BASE FINAL
+* Se implementó la colisión de vista del enemigo con el cuerpo del personaje, con lo que se hace "contacto visual", incluye un diálogo donde el enemigo dice "te veo"/"i see you" en función del idioma activo.
+* También se implementa un colisionador de cabeza para el personaje y el enemigo. Este colisionador no interactua con los cuerpos, ni entre ellas (esto ayuda a crear una sensación más 3D del escenario), pero sí van a responder a los ataques de golpes y patadas. 
+* Se crea una función para elegir el orden de dibujado entre el personaje y el enemigo, quien se encuentre más abajo en la pantalla se grafica al último, para dar la impresión que está más cerca del jugador. Esto también ayuda a crear la ilusión de tres dimensiones. 
+* Se implementa el método controlConducta, donde el enemigo estará en modo Patrulla (la forma de caminar arriba-abajo que ya está implementada) y la de ataque, con lo cual ahora se mueve hacia el personaje y tira golpes y patadas al azar, esto implementado en el método controlAccion. Con ello se implementa el combate y queda lista la versión como "BASE FINAL". Cabe señalar que el movimiento del enemigo aún no es adecuado, pero ya ataca.
+
+INDICACIONES FINALES PARA CREAR EJECUTABLE
+* Si desean crear un ejecutable del proyecto deben hacer lo siguiente:
+1 Elegir la opción del menu Archivo/Exportar como aplicación.
+2 Dentro de ese cuadro de diálogo, hay tres secciones:
+  2.1 Sistemas operativos. Aquí podrán elegir para qué sistemas operativos se va a generar el ejecutable. Elijan las que deseen. Si ven alguna desactivada deben agregar la herramienta correspondiente.
+  2.2 Pantalla completa. Aquí solo se agregará un marco si su pantalla es de menor tamaño que la pantalla completa de su equipo. Sugiero que no la activen.
+  2.3 Incluir Java. Se agregan las librerías de Java necesarias para correr el juego. Recomendable si se quisiera crear una versión de distribución donde se sabe que no todos los usuarios tendrían instalado Java.
+3 Se hace clic en el botón Exportar, tarda un poco en crearse las carpetas con las versiones para los sistemas operativos seleccionados. El ejecutable siempre estará en la carpeta raíz del proyecto ya compilado.
+* Pudiera ocurrir que el juego no pase de la pantalla de carga, la causa suele ser el video, al momento la forma con la que se podía corregir el error en versiones anteriores no funciona, pero al probarlo en mi equipo funcionó sin problemas.
+-------------------------------------------------------------------------------------------
+Versión Agregados 8 (A8)
+* Algunos acrhivos de audio pueden no ser reconocidos por Minim, provocando que el juego no pase de la pantalla de carga. Para corregirlo se recomienda convertir el archivo a un formato mp3 compatible. El programa que hasta ahora me ha convertido los archivos sin problema es Audacity. Voy a actualizar el video de créditos para agregar esta herramienta, pero no estará todavía en esta versión. 
+* Se rediseñó la pantalla de Configuración para incorporar los controles de audio. Esto requirió agregar más mensajes de texto y parámetros configurables.
+* También requirió definir un nuevo control: SliderBar. Al momento es una caja negra con un valor numérico. Tiene indicados valores límite (mínimo y máximo) y se aumenta su valor con un clic izquierdo sobre el control y se reduce con un clic derecho.
+* Se agregaron efectos de sonidos variados: golpe, patada, pasos, caminar y muerte del personaje como del enemigo con sonidos distintos para cada uno (hay archivos para sonidos de aves, pero no han sido empleados).
+* El caso de caminar se utiliza un AudioPlayer en lugar de un AudioSample, porque funciona similar a la música, es decir que se mantiene en loop mientras está presionada una tecla de movimiento, el sonido se detiene cuando se suelta la tecla y reanuda nuevamente al usar una dirección.
+* Se corrigió un error con el sprite trigger, el cual acumulaba daño mientras esta activo el sprite específico para herir. Ahora ya solo daña cuando se detecta la colisión y por lo tanto no se acumula daño.
+-------------------------------------------------------------------------------------------
+Versión Agregados 7 (A7)
+* Se implementó el concepto de "sprite trigger". Esto es una bandera que se activa en un sprite específico dentro de una animación. Su función es para indicar cuándo se puede hacer algo en el momento que en esa animación deba ocurrir algo más. Se implementó para hacer que los colisionadores de patada y golpe solo se activen cuando el ataque tenga la extremidad extendida por completo (es decir que ahora el ataque debe hacerse con más precisión). Los módulos que requirieron cambios para hacer funcionar esto fueron:
+	- SpriteSet
+	- AnimationStructure
+	- Personaje
+	- Enemigo
+	- PantGame
+* Se actualizó el video para incluir las dos nuevas canciones, que se reproducen al ganar o perder el juego, recordando que al momento se gana al vencer al enemigo y se pierde al morir. Se hizo la implementación en el Principal, GameControl y PantEndGame para incoroporar estas pistas de audio.
+* También se corrigió un error en los nombres de los estudiantes (por ello recomiendo que vean el video completo para señalar alguna observación al respecto de los datos).
+* Se implementó el efecto de la dificultad en el juego. Como se ha visto, el juego permite tres niveles de dificultad, los niveles y efectos son:
+	- Fácil: En este nivel el ataque recibe un "buffeo", es decir que se incrementa y 		el nivel de daño recibido se "nerfea", se decrementa. La cantidad se 			controla mediante el parámetro configurable injure. Debe hacerse notar que 		ahora hay un valor distinto para el daño de golpe y de patada.
+	- Normal: En él los valores de daño hecho y recibido no se ven afectados por los 		parámetros específicados.
+	- Difícil: En este nivel el ataque recibe un "nerfeo", es decir que se decrementa y 		el nivel de daño recibido se "buffea", se incrementa. La cantidad se 			controla mediante el parámetro configurable injure. Debe hacerse notar que 		ahora hay un valor distinto para el daño de golpe y de patada.
+La implementación de estos efectos se realizó en la clase Personaje, en los métodos herir de Personaje y Enemigo. Además que requirió crear en ambas clases los métodos dagnoRecibido() y difEffect(), en la clase PantGame se hicieron las modificaciones pertinentes, en el principal se definieron las constantes booleanas DMGP y DMGK para identificar el tipo de daño que se genera. 
+* De forma temporal (en lo que se termina de implementar el combate por parte del Enemigo) se agregó un caso para que se pueda herir al personajes de dos formas: con '1' recibe el daño que corresponde a un golpe y con '2' el de una patada.
+* Se agregaron parámetros configurables para el control de ganancia (volumen) de efectos de sonido, música y voces, así como el valor de ganancia para la música en la pausa, Con esto es viable poder modificar el volumen desde la Pantalla de Configuración (aun no está implementado, pero espero agregarlo en una versión futura).
+-------------------------------------------------------------------------------------------
+Versión Agregados 6 (A6)
+* Se cambió el video de prueba por el correcto. Se incluyen los recursos de edición (presentación PowerPoint y track de audio) para poder editar.
+* Se implementó la clase TopScores, la cual controla un archivo de texto llamado topscores.txt (ubicado en la carpeta data), en el cual se guardan los diez tiempos más largos del juego. Se incluye el nombre del jugador que se encuentre registrado en la pantalla de configuración. El criterio para ordenar los datos es por la cantidad de segundos que el jugador logró sobrevivir.
+* Se incluye una copia del archivo topscores.txt, llamado topscores.back, para restaurarlo si desean (solo debe abrirse en bloc de notas, guardarlo como topscores.txt y listo), aun no se implementa un modo de restablecerlo, podría ser un agregado por parte de los equipos.
+* Para hacer funcionar los puntajes máximos se agregaron factores en ConfigFiles, archivo config.dat, módulo principal, PantGame y PantTopScores, además se reutilizó la clase Reloj y se colocó uno en PantGame.
+*Como agregado temporal se colocó de nuevo el evento de presionando la tecla 1, se hiere al personaje, esto mientras no se termine de implementar el combate, espero que eso quede en días próximos.
+-------------------------------------------------------------------------------------------
+Versión Agregados 5 (A5)
+* Se ajustó la posición relativa y tamaño de los colisionadores de golpe y patada así como el factor de daño corespondiente a cada tipo de ataque.
+* Se implementó el control de activación y desactivado de los colisionadores de golpe y patada para el personaje. Con lo cual ya es posible hacer que el personaje ataque al enemigo.
+-------------------------------------------------------------------------------------------
+Versión Agregados 4 (A4)
+* Se incorpora un video (agarré una escena de una película para ilustrar, luego será ya el video de créditos conmemorativo), para hacer lo funcionar se requiere la libreria Video y un poco de código en el módulo principal (importar librería, declarar objeto, cargar video y un método de control) y en PantCredits (lo relacionado con la reproducción).
+-------------------------------------------------------------------------------------------
+Versión Agregados 3 (A3)
+* Se modificaron las imágenes de los planos de la pantalla de Juego, con esto se mejora la calidad gráfica de la escena, ilustrando cómo el trabajo de los diseñadores pueden hacer que el juego luzca más, pero técnicamente lo programado sirve de cimiento para el proyecto.
+* Se hizo un primer conjunto de modificaciones en la clase Enemigo, para que este pueda desplegar su propia información en pantalla y aparezca, si bien se emplean los mismos sprites para su animación. Aunque ellos no podrán defensa, se mantiene el mismo número y orden de secuencias para facilitar algunas cosas en la versión de referencia.
+*Esto obligó a crear un nuevo factor configurable, emaxhp, para indicar la salu máximda de un enemigo.
+*Se retiraron los colisionadores que se usaron para probar el sistema de colisiones y ahora se parte de la posibilidad de que estas ocurran con los enemigos.
+*También se modificó la pantalla de juego para incluir al Enemigo, al momento en esta versión no tiene control de movimiento propio, ni se mueve "anclado" a la pantalla. sus valores iniciales están como estartx y estarty en el archivo config.fat para poder editar con facilidad estos valores y poder hacer pruebas. 
+* Se cambió el orden de graficación del HealItem, el personaje y el enemigo, para que no provoque el efecto extraño de quedar flotando encima del personaje cuando su cuerpo pasa junto al objeto.
+* Aun no se ajustan los colisionadores de golpe y patada del personaje, ni los del enemigo, asi como el control de activación y desactivación para habilitar el combate. Es una de las cosas que esperaré un poco para liberar, puesto que es un buen espacio de oportunidad para que realicen pruebas, documentarlas con la Bitácora y logren hacerlo funcionar por sí mismos.
+-------------------------------------------------------------------------------------------
+Versión Agregados 2 (A2)
+*Se implementó en PantGame una función resetGame(), con la cual el juego evidentemente se reinicia, además se requirió una variable booleana global que indica que el juego se va a reiniciar.
+* Se implementó una pantalla de fin de juego, esta se activa cuando termina la animación de muerte del personaje, la cual ahora es de una sola vez.
+* Se redujo código con la función cambiaAnimacion en Personaje y Enemigo, con ello bloques que ocupaban cuatro líneas de código ahora se invocan con solo una.
+* Se implementaron las animaciones de golpe, patada y salto como de una sola repetición, además se bloquea el procesamiento de más acciones durante estas acciones. Cuando dichas animaciones terminan, se reactiva el procesamiento de acciones de entrada. Esto requirió implementar un método en AnimationStructure para poder manipular el SpriteSet correspondiente a la animación que se haya indicado.
+* Se creó la clase Enemigo, reutilizando el código de Personaje. Aun no se incorporan al juego.
+-------------------------------------------------------------------------------------------
+Versión Agregados 1 (A1)
+* Se implementó la clase ToggleButton, con ella se pueden crear componentes tipo checkbox, es decir que motrarán un círculo color verde o rojo según se desee tener activado o no un valor booleano. En el ejemplo se está controlando si se muestran o no las cajas de colisión del juego.
+* Se implementó la clase BotonUD, el cual funciona como un selector de letras mayúsculas y números dígitos, con la intención de crear el nombre del jugador para los registros de puntaje más altos del juego. Es una mejora con respecto a la clase del mismo nombre en el proyecto de 2022 (Proyecto CVGS), el cual solo permitía seleccionar letras. Funciona con clics izquierdos y derechos, con los primeros avanza hacia arriba, y con el izquierdo retrocede.
+* Se reorganizó el contenido de la Pantalla de Configuración, tanto en el layout de los componentes, una imagen de fondo, y el agregado de textos para identificar las características configurables así como se agregaron los controles para cambiar la dificultad del juego (aun no implementada en el juego, pero el selector ya opera), activar o desactivar la visualización de las cajas de colisión y para elegir el nombre del jugador.
+* Se implementó el primer audio de voz, el cual se activa al iniciar un juego, en español dice "comienza el juego" y en inglés "game start". Esto requirió definir un código de mensaje (el 28) en cada archivo de idioma, actualizar el config.dat, un método para carga de esos audios y un AudioSampler para ese mensaje, pero se cargará al inicio o cuando se cambie el idioma en la Pantalla de Configuración.
+* Adicionalmente se requirieron cambios menores en las clases Principal (definiendo constantes para los niveles de dificultad), ConfigFiles (tanto en el código fuente como en el archivo config.dat para contener nuevos valores configurables) y en los archivos de idiomas (se aumentó de 21 a 29 mensajes diferentes). 
+-------------------------------------------------------------------------------------------
+Versión 16
+* Se implementó la clase Bitácora, la cual permite generar un registro de datos en tiempo de ejecución del juego. Es idónea para pruebas, por lo cual es la tercer característica que se ofreció para todos los estudiantes, incluidos aquellos que no tengan interés por el desarrollo de video juegos.
+* Se agregó entonces en ConfigFiles la posibilidad de activar o desactivar la bitácora en el juego.
+* Adicionalmente se agregaron ejemplos de uso dentro del juego para ilustrar cómo se pueden generar registros de bitácora durante la ejecución del juego.
+-------------------------------------------------------------------------------------------
+Versión 15
+* Se implementó la clase HealItem, con la cual se crea un objeto específico para curar. Al momento solo usa un sprite y se desactiva cuando se sale de la pantalla o se colisiona con él. Además tiene efecto de sonido.
+* Se implementó el control de scroll del fondo, el cual se queda quieto cuando el personaje está en la mitad izquierda de la pantalla, se mantiene en medio se puede avanzar sobre el escenario y se puede caminar sobre la mitad derecha cuando se ha llegado al borde final de la escena.
+* Se han agregado muchos factores configurables, como posiciones relativas y tamaños de colisionadores, medidas estándar de botones, duración de temporizadores de invulnerabilidad del personaje tras curarse o ser golpeado y control de visualización de los colisionadores.
+* Las heridas y curaciones ahora ya están temporizadas.
+*Se ajustó el tamaño de los planos de fondo, para que no siempre aparezcan en pantalla. El scroll se detiene cuando el plano más lento, el cielo, llegue al borde de su imagen.
+-------------------------------------------------------------------------------------------
+Pantallas (opcionales) a agregar
+* Selección de personaje
+* Fin de juego (victoria)
+* Fin de juego (derrota)
+* Minijuego
+* Tutorial o instrucciones
+* Escena
