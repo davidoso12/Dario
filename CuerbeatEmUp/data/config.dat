@@ -1,4 +1,4 @@
-#language=1
+#language=0
 #langstr=38
 #spdx=3
 #spdy=3
@@ -23,7 +23,7 @@
 #htime=120
 #logstate=OFF
 #dif=25
-#plynm=TST
+#plynm=XVZ
 #emaxhp=50
 #estartx=1100
 #estarty=360
@@ -35,10 +35,11 @@
 #clinc=0.001
 #topsc=10
 #sfxgain=6
-#mscgain=-7
+#mscgain=6
 #voigain=6
 #mscgainlow=-15
 #mingain=-30
 #maxgain=6
 #prhy=-53
 #pchs=18
+
