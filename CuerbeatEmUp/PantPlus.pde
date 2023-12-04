@@ -31,7 +31,7 @@ class PantPlus{
     imgcie=new Punto2D(0,0);
     imgmon=new Punto2D(0,-65);
     imgpis=new Punto2D(0,260);
-    enemy=new Enemigo(cf.estartx,cf.estarty,100,200);
+    
     btnpause=new Boton(640,685,cf.btnw,cf.btnh,15);
     bal=-1.0;
     dir=RIGHT;
@@ -40,7 +40,7 @@ class PantPlus{
   void display(){
     music();
     if(resetgame)
-    resetGame();
+      resetGame();
     background(0,0,0);
     fill(255);
     stroke(255);
@@ -53,7 +53,6 @@ class PantPlus{
     imageMode(CENTER);
     hi.display();
     graficaCombatientes();
-    enemy.setPerpos(per.pos);
     checkColisiones();
     rlj.controlReloj();
     btnpause.display();
@@ -72,12 +71,10 @@ class PantPlus{
   }
   
   void graficaCombatientes(){
-    if(per.pos.getY()<=enemy.pos.getY()){ //personaje al fondo
+    if(per.pos.getY()<=per.pos.getY()){ //personaje al fondo
       per.display();
-      enemy.display(per.getOnScroll(),per.getOnMotion());
     }
     else{  //enemigo al fondo
-      enemy.display(per.getOnScroll(),per.getOnMotion());
       per.display();
     }
   }
@@ -125,9 +122,7 @@ class PantPlus{
   }
   
   void checkColisiones(){
-    //colisiones del cuerpo del personaje contra otros elementos
-    if(per.clbody.isColision(enemy.clbody))
-      per.undoMotion();  
+    //colisiones del cuerpo del personaje contra otros elementos  
     if(per.clbody.isColision(hi.clheal)){
       sfxdrink.trigger();
       per.curar(); 
@@ -135,59 +130,6 @@ class PantPlus{
       per.clbody.deactivate();
       hi.toggleActive();
     }
-    //colisiones de combate del personaje contra el cuerpo del enemigo
-    if(per.clkick.isColision(enemy.clbody)){
-      if(enemy.herir(DMGK)){
-        rlj.detenReloj();
-        salvaTiempo();
-      }
-      per.clkick.active=false;
-      per.onhit=true;
-    }  
-    if(per.clpnch.isColision(enemy.clbody)||per.clpnch.isColision(enemy.clhead)){
-      if(enemy.herir(DMGP)){
-        rlj.detenReloj();
-        salvaTiempo();
-      }
-      per.clpnch.active=false;
-      per.onhit=true;
-    }  
-    if(per.clkick.isColision(enemy.clbody)||per.clkick.isColision(enemy.clhead)){
-      if(enemy.herir(DMGK)){
-        rlj.detenReloj();
-        salvaTiempo();
-      }
-      per.clkick.active=false;
-      per.onhit=true;
-    }  
-    //colisión de "ver" del enemigo
-    if(enemy.clview.isColision(per.clhead)){
-      voiseeu.trigger();
-      enemy.clview.active=false;
-      enemy.setConducta(CNDATK);
-    }
-    //colisiones del cuerpo del enemigo contra otros elementos
-    if(enemy.clbody.isColision(per.clbody))
-      enemy.undoMotion();
-    if(enemy.clview.isColision(per.clbody))
-      enemy.setConducta(CNDATK);
-    //colisiones de combate del enemigo contra el cuerpo del personaje
-    if(enemy.clkick.isColision(per.clbody)||enemy.clkick.isColision(per.clhead)){
-      if(per.herir(DMGK)){
-        rlj.detenReloj();
-        salvaTiempo();
-      }
-      enemy.clkick.active=false;
-      enemy.onhit=true;
-    }  
-    if(enemy.clpnch.isColision(per.clbody)||enemy.clpnch.isColision(per.clhead)){
-      if(per.herir(DMGP)){
-        rlj.detenReloj();
-        salvaTiempo();
-      }
-      enemy.clpnch.active=false;
-      enemy.onhit=true;
-    }  
   }
   
   void resetGame(){

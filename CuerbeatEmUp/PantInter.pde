@@ -5,7 +5,7 @@
 //Descripción: El módulo PantGame controla la pantalla
 // de "acción" del juego.
 
-class PantInter{  //regresa a pantalla principal
+class PantInter{  
   Boton btnret;
   Boton btnplus;
   Boton btngamen;
