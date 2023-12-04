@@ -50,10 +50,10 @@ class Personaje{
     it=new Temporizador(cf.itime);
     ht=new Temporizador(cf.htime);
     anistr=new AnimationStructure();
-  anistr.addSpriteSet(new SpriteSet("sprite/sprites/animation/prota/pro_walk/",
+    anistr.addSpriteSet(new SpriteSet("sprite/sprites/animation/prota/pro_walk/",
                         "prota_camina",8,".png",7,false,0));
     anistr.addSpriteSet(new SpriteSet("sprite/sprites/animation/prota/pro_dead/",
-                        "dead",5,".png",6,false,0));
+                        "dead_",5,".png",6,false,0));
     anistr.addSpriteSet(new SpriteSet("sprite/sprites/animation/prota/pro_defense/",
                         "idle",5,".png",15,false,0));
     anistr.addSpriteSet(new SpriteSet("sprite/sprites/animation/prota/pro_hit/",
