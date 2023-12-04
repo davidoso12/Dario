@@ -1,5 +1,5 @@
 //Módulo PantGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 23 de septiembre de 2023 
 //Fecha de última modificacion: 2 de diciembre de 2023
 //Descripción: El módulo PantGame controla la pantalla
@@ -9,6 +9,7 @@ class PantGame{
   Personaje per;
   HealItem hi;
   Reloj rlj;
+  //PImage pixe;
   PImage cielo;
   PImage montes;
   PImage piso;
@@ -26,6 +27,7 @@ class PantGame{
     hi=new HealItem(450,500,0,0);
     rlj=new Reloj();
     rlj.iniciaReloj();
+   // pixe=loadImage("sprite/fondos/diapixe.png");
     cielo=loadImage("sprite/fondos/cielo.png");
     montes=loadImage("sprite/fondos/montes.png");
     piso=loadImage("sprite/fondos/piso.png");
@@ -115,7 +117,7 @@ class PantGame{
   void keyControl(char k){
     per.keyControl(k);
   }
-  
+
   void keyRelControl(char k){
     per.keyRelControl(k);
   }

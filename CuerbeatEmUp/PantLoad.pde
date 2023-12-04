@@ -1,5 +1,5 @@
 //Módulo PantLoad
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 18 de septiembre de 2023 
 //Fecha de última modificacion: 25 de octubre de 2023
 //Descripción: El módulo PantLoad controla la pantalla

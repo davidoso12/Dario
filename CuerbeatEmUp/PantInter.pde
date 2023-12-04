@@ -1,9 +1,9 @@
-//Módulo PantGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Módulo PantInter
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 23 de septiembre de 2023 
 //Fecha de última modificacion: 2 de diciembre de 2023
-//Descripción: El módulo PantGame controla la pantalla
-// de "acción" del juego.
+//Descripción: El módulo PantInter Es la pantalla que controla hacia que pantalla quiere ir el usuario
+// 
 
 class PantInter{  
   Boton btnret;
@@ -11,7 +11,7 @@ class PantInter{
   Boton btngamen;
   PantInter(){
     btngamen=new Boton(440,360,cf.btnw,cf.btnh,38);
-    btnret=new Boton(840,360,cf.btnw,cf.btnh,19);
+    btnret=new Boton(840,360,cf.btnw,cf.btnh,40);
     btnplus=new Boton(650,260,cf.btnw,cf.btnh,39);
   }
   

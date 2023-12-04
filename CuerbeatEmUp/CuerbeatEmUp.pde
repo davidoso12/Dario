@@ -76,7 +76,7 @@ void setup(){
   icon=loadImage("sprite/misc/icon.png");
   size(1280,720);
   windowMove(100,100);
-  windowTitle("Cuerbeat 'Em Up");
+  windowTitle("Proyecto Dario,Equipo 8");
   surface.setIcon(icon);
   typtitle=createFont("Arial",32);
   textFont(typtitle);
@@ -97,12 +97,20 @@ void mouseReleased(){
   gc.mouseControl(mouseX,mouseY,mouseButton);
 }
 
+
+//Controla las teclas para el movimiento del personaje en cada pantalla
+
+
 void keyReleased(){
   gc.keyRelControl(key);
+  gc.keyRelControlPantGamen(key);
+  gc.keyRelControlPantPlus(key);
 }
 
 void keyPressed(){
   gc.keyControl(key);
+  gc.keyControlPantGamen(key);
+  gc.keyControlPantPlus(key);
 }
 
 void music(){

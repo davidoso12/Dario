@@ -1,5 +1,5 @@
 // Módulo SliderBar
-// Elaborado por: Rubén Dario Hernandez Mendo
+// Elaborado por: Osorio Gutierrez David
 // Fecha de creación: 1 de diciembre de 2023
 // Fecha de última modificación: 1 de diciembre de 2023
 // Comentario: La clase SliderBar implementa un control deslizante para elegir

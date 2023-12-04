@@ -1,5 +1,5 @@
 //Módulo ConfigFiles 
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 25 de septiembre de 2023
 //fecha de ultima modificación: 2 de diciembre de 2023
 //comentario: Define la clase ConfigFiles, la cual permite 

@@ -1,13 +1,14 @@
 //Módulo GameControl
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 13 de septiembre de 2023 
-//Fecha de última modificacion: 29 de noviembre de 2023
+//Fecha de última modificacion: 2 de Diciembre de 2023
 //Descripción: El módulo GameControl tendrá la función de
  //coordinar la ejecución del juego en función de la pantalla
  //activa.
  
  class GameControl{
    int pantact; //es la pantalla activa
+   Personaje per;
    PantPrin pantprin;
    PantGame pantgame;
    PantLoad pantload;
@@ -103,20 +104,48 @@
      }                    
    }
    
-   void keyControl(char k){
+void keyControl(char k){
+  switch(pantact){
+    case PANTGAME:
+      pantgame.keyControl(k);
+      break;
+  }
+}
+
+void keyRelControl(char k){
+  switch(pantact){
+    case PANTGAME:
+      pantgame.keyRelControl(k);
+      break;
+  }
+}
+
+      void keyControlPantGamen(char W){
      switch(pantact){
-       case PANTGAME: pantgame.keyControl(k);
+       case PANTGAMEN: pantgamen.keyControlPantGamen(W);
                       break;
      }  
    }
-   
-   void keyRelControl(char k){
+
+   void keyRelControlPantGamen(char W){
      switch(pantact){
-       case PANTGAME: pantgame.keyRelControl(k);
+       case PANTGAMEN: pantgamen.keyRelControlPantGamen(W);
                       break;
      }  
    }
-   
+         void keyControlPantPlus(char P){
+     switch(pantact){
+       case PANTPLUS: pantplus.keyControlPantPlus(P);
+                      break;
+     }  
+   }
+
+   void keyRelControlPantPlus(char P){
+     switch(pantact){
+       case PANTPLUS: pantplus.keyRelControlPantPlus(P);
+                      break;
+     }  
+   }
    void musicManager(boolean s){
     musicon=s;
     playTrack((musicon?pantact:-1));

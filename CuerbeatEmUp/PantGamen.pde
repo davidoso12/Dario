@@ -1,9 +1,9 @@
-//Módulo PantGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Módulo PantGamen
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 23 de septiembre de 2023 
 //Fecha de última modificacion: 2 de diciembre de 2023
 //Descripción: El módulo PantGame controla la pantalla
-// de "acción" del juego.
+// de "acción" del juego. pero en modo nocturno
 
 class PantGamen{
   Personaje per;
@@ -112,12 +112,12 @@ class PantGamen{
     }
   }
   
-  void keyControl(char k){
-    per.keyControl(k);
+  void keyControlPantGamen(char W){
+    per.keyControl(W);
   }
-  
-  void keyRelControl(char k){
-    per.keyRelControl(k);
+
+  void keyRelControlPantGamen(char W){
+    per.keyRelControl(W);
   }
   
   void mouseControl(int x,int y,int b){

@@ -1,9 +1,9 @@
-//Módulo PantGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Módulo PantPlus
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 23 de septiembre de 2023 
 //Fecha de última modificacion: 2 de diciembre de 2023
-//Descripción: El módulo PantGame controla la pantalla
-// de "acción" del juego.
+//Descripción: El módulo PantPlus es donde el personaje poodra adquirir mas vida 
+// 
 
 class PantPlus{
   Personaje per;
@@ -35,7 +35,7 @@ class PantPlus{
     
     btnpause=new Boton(640,685,cf.btnw,cf.btnh,15);
     btngamen=new Boton(640,50,cf.btnw,cf.btnh,38);
-    btnret=new Boton(890,50,cf.btnw,cf.btnh,19);
+    btnret=new Boton(890,50,cf.btnw,cf.btnh,40);
     bal=-1.0;
     dir=RIGHT;
   }
@@ -111,13 +111,14 @@ class PantPlus{
     }
   }
   
-  void keyControl(char k){
-    per.keyControl(k);
+  void keyControlPantPlus(char P){
+    per.keyControl(P);
+  }
+
+  void keyRelControlPantPlus(char P){
+    per.keyRelControl(P);
   }
   
-  void keyRelControl(char k){
-    per.keyRelControl(k);
-  }
   
   void mouseControl(int x,int y,int b){
     if(btnpause.isClicked(x,y,b)){

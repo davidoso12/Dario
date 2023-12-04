@@ -1,5 +1,5 @@
 //Modulo AnimationStructure
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 6 de octubre de 2023
 //fecha de ultima modificación: 30 de noviembre de 2023
 //comentario: Es el objeto que concentra varios sets de animación básica para

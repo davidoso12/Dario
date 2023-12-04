@@ -1,5 +1,5 @@
 //Módulo LifeBar
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 8 de noviembre de 2023
 //fecha de ultima modificación: 1 de diciembre de 2023
 //comentario: Se implementa una barra de vida para controlar la salud del

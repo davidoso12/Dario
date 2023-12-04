@@ -1,5 +1,5 @@
 //Módulo PantEndGame
-//Elaborado por: Rubén Dario Hernández Mendo
+//Elaborado por: Osorio Gutierrez David
 //Fecha de creación: 26 de noviembre de 2023 
 //Fecha de última modificacion: 29 de noviembre de 2023
 //Descripción: El módulo PantEndGame controla la pantalla de configuración del

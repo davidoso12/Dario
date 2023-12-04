@@ -1,5 +1,5 @@
 //Módulo Personaje
-//elaborado por: Rubén Dario Hernandez Mendo
+//elaborado por: Osorio Gutierrez David
 //fecha de creación: 8 de octubre de 2023
 //fecha de ultima modificación: 2 de diciembre de 2023
 //comentario: se implementa la clase Personaje con el propósito de organizar los
