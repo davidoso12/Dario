@@ -112,12 +112,12 @@ class PantGamen{
     }
   }
   
-  void keyControl(char k){
-    per.keyControl(k);
+  void keyControlPantGamen(char W){
+    per.keyControl(W);
   }
-  
-  void keyRelControl(char k){
-    per.keyRelControl(k);
+
+  void keyRelControlPantGamen(char W){
+    per.keyRelControl(W);
   }
   
   void mouseControl(int x,int y,int b){

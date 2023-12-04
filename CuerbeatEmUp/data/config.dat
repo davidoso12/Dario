@@ -22,8 +22,8 @@
 #itime=60
 #htime=120
 #logstate=OFF
-#dif=26
-#plynm=YG4
+#dif=25
+#plynm=ZH4
 #emaxhp=50
 #estartx=1100
 #estarty=360
@@ -34,9 +34,9 @@
 #espdy=1
 #clinc=0.001
 #topsc=10
-#sfxgain=1
-#mscgain=1
-#voigain=1
+#sfxgain=0
+#mscgain=0
+#voigain=0
 #mscgainlow=-15
 #mingain=-30
 #maxgain=6

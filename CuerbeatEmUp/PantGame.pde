@@ -115,7 +115,7 @@ class PantGame{
   void keyControl(char k){
     per.keyControl(k);
   }
-  
+
   void keyRelControl(char k){
     per.keyRelControl(k);
   }

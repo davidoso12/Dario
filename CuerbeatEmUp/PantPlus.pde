@@ -111,13 +111,14 @@ class PantPlus{
     }
   }
   
-  void keyControl(char k){
-    per.keyControl(k);
+  void keyControlPantPlus(char P){
+    per.keyControl(P);
+  }
+
+  void keyRelControlPantPlus(char P){
+    per.keyRelControl(P);
   }
   
-  void keyRelControl(char k){
-    per.keyRelControl(k);
-  }
   
   void mouseControl(int x,int y,int b){
     if(btnpause.isClicked(x,y,b)){

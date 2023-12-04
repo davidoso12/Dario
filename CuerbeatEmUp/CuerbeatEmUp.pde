@@ -99,10 +99,14 @@ void mouseReleased(){
 
 void keyReleased(){
   gc.keyRelControl(key);
+  gc.keyRelControlPantGamen(key);
+  gc.keyRelControlPantPlus(key);
 }
 
 void keyPressed(){
   gc.keyControl(key);
+  gc.keyControlPantGamen(key);
+  gc.keyControlPantPlus(key);
 }
 
 void music(){
