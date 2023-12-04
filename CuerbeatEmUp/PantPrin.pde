@@ -16,7 +16,7 @@ class PantPrin{
   Temporizador tmpexit;
   
   PantPrin(){
-    imgtit=loadImage("sprite/fondos/fondoraven.jpg");
+    imgtit = loadImage("sprite/fondos/principla.png");
     btnconf=new Boton(990,410,cf.btnw,cf.btnh,10);
     btnplay=new Boton(990,470,cf.btnw,cf.btnh,11);
     btntops=new Boton(990,530,cf.btnw,cf.btnh,12);

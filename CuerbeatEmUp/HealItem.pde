@@ -15,7 +15,7 @@ class HealItem{
     sze=new Punto2D(s);
     clheal=new Colisionador(pos,new Punto2D(0,0),cf.hcs,COLHEAL);
     active=true;
-    hitm=loadImage("sprite/misc/guajolocombo.png");
+    hitm=loadImage("sprite/misc/plus.png");
   }
   
   HealItem(int x,int y,int fx,int fy){
@@ -23,7 +23,7 @@ class HealItem{
     sze=new Punto2D(fx,fy);
     clheal=new Colisionador(pos,new Punto2D(0,0),cf.hcs,COLHEAL);
     active=true;
-    hitm=loadImage("sprite/misc/guajolocombo.png");
+    hitm=loadImage("sprite/misc/plus.png");
   }
   
   void display(){
